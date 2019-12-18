@@ -1,0 +1,22 @@
+
+@import "variable";
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: "montserrat",sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+	body{
+		@import "media";
+		width: 100%;
+		height: auto;
+		@import "header"; 
+		@import "slider";
+		@import "main";
+		@import "footer";
+	}
+}

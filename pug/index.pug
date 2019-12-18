@@ -1,0 +1,165 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Chrismast Shop
+    link(rel="stylesheet" href="./css/style.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css")
+    link(rel="icon" href="./img/favicor.jpg" type="image/gif" sizes="16x16")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+   header
+    h2.header__logo Christmas shop
+    input#header__check(type="checkbox")
+    label.header__show(for="header__check")
+     i(class="fas fa-ellipsis-h")
+    -var list=["home","our service","category","our misssion","contact us"]
+    ul.header__menu
+     each item in list
+      li.header__menu--list
+       |
+       |
+       a=item
+     label.header__menu--hide(for="header__check")
+      i(class="fas fa-times")
+   #slider
+    mixin item(title,desc,src)
+       .slider
+        .legend
+        .content
+         .content-txt
+          h1= title
+          h2= desc
+        .image
+          img(src= src)
+    .slides
+        +item(
+          "Christmas Decorations",
+          "Christmas Decorations are our speciality! With everything from Christmas tree baubles, decorative Santa figures, Christmas tree toppers, Christmas tree skirts, Christmas animated figures, Christmas train sets to tinsel.",
+          "./img/chris4.jpg")
+        +item(
+          "Artificial Christmas Trees",
+          "The Artificial Christmas Tree is the focal point for any home at this festive time of year, our luxury tree range has been expanded for the 2019 festive season. We now have a collection of very realistic trees that have the latest PE tips and snow flocked branches. ",
+          "./img/chris1.jpg")
+        +item(
+          "Christmas Room Decorations",
+          "Get ready to deck your walls, windows and ceilings with our huge range of room decorations. Seasons has everything you need to get the festive season underway from modern holographic foil decorations, to traditional bells..",
+          "./img/chris2.jpg")
+        +item(
+          "Christmas Model Villages - Lemax",
+          "Lemax Christmas Model Villages from Seasons are the perfect way to introduce seasonal charm into your home. ",
+          "./img/chris3.jpg"
+          )
+    .switch
+     ul
+      li
+       .on
+      each i in [,,,]
+       li= i
+   main
+    #main__ourService.main__ourService
+     .main__ourService--image
+      img.repo(src="./img/back4.jpg" alt= "error")
+     .main__ourService--box
+      .main__ourService--title
+       h3 our service
+      .main__ourService--content
+       p We offer the full spectrum of services to help organizations work better. Everything from creating standards of excellence to training your people to work in more effective ways, assessing how you’re doing, and helping you perform even better in future. Very few others do this, and none have been doing it as long as we have.
+
+    mixin main__category--content(title,icon,desc,src1)
+       .main__category--item
+        .main__category--content
+         h3= title
+          i(class= icon)
+         p= desc
+        .main__category--images
+         img(src= src1)
+    #main__category.main__category
+      +main__category--content(
+        "tree chris ",
+        "fas fa-tree",
+        "Germany is credited with starting the Christmas tree tradition as we now know it in the 16th century when devout Christians brought decorated trees into their homes.",
+        "./img/chris5.jpg"
+        )
+      +main__category--content(
+        "candy crush ",
+        "fas fa-candy-cane",
+        "Germany is credited with starting the Christmas tree tradition as we now know it in the 16th century when devout Christians brought decorated trees into their homes.",
+        "./img/chris4.jpg"
+        )
+      +main__category--content(
+        "snow man",
+        "fas fa-candy-cane",
+        "Germany is credited with starting the Christmas tree tradition as we now know it in the 16th century when devout Christians brought decorated trees into their homes.",
+        "./img/chris6.jpg"
+        )
+    #main__ourMission.main__ourMission
+     .main__ourMission--content
+      h3 our mission
+      p Each year, the Mission works hand-in-hand with generous individuals, churches, schools, and businesses to make the season a little brighter for low-income or homeless families, nursing home residents, children at the Vanderberg Youth Center, and Jackson County Jail inmates. With the help of volunteers, we distribute more than 16,000 new items during the Christmas season.
+      img(src="./img/transfer.jpg" alt="null") 
+     .main__ourMission--slides
+      .main-content
+       .container
+        .image-container(class = "medium display one") DONATE ONLINE
+        .image-container(class = "large display two") FUNDRAISE
+        .image-container(class = "medium display three") SPECIAL DELIVERY
+        .image-container(class = "small display four") BE LIKE
+        .image-container(class = "tall display five") TEXT DONATE
+        .image-container(class = "wide display six") GIFT IDEAS
+    .main__visit
+     .main__visit--image
+      img(src="./img/back3.jpg" alt="null")
+     .main__visit--content
+      h3 Visting our blogs
+      p Building a website is, in many ways, an exercise of willpower. It’s tempting to get distracted by the bells and whistles of the design process, and forget all about creating compelling content.
+      a.main__btn2(href="#") Visitting....
+   footer
+    mixin footer_info--item(title, ...items)
+     .footer_info--item
+       h4= title
+       .footer_info--item--list
+        ul
+          each item in items
+           li
+            a(href="#")= item
+    #footer.footer__infor
+     +footer_info--item(
+      "service",
+      '1-866-668-5962',
+      'Live Chat',
+      'Safety Recall Notices',
+      'Contact Us',
+      'Order Status',
+      'One Year Guarantee',
+      '*Promotion Details'
+      )
+     +footer_info--item(
+      "company",
+      'About Us',
+      'Careers',
+      'Retail Stores',
+      'Contact Us',
+      'Grandin Road Cares',
+      'One Year Guarantee',
+      'Accessibility Statement'
+      )
+     +footer_info--item(
+      "resource",
+      'Hue + With: our blog',
+      'Gift Registry',
+      'Gift Services',
+      'Corporate Sales'
+      )
+     +footer_info--item(
+      "catalog",
+      'Catalogs Online',
+      'Request a Catalog'     
+      )
+    hr
+    p.footer__byme &copy; All right Reversed. Design by 
+     i Tuan
+
+
+
+
