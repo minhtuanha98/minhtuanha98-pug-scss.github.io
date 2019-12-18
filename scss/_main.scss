@@ -685,7 +685,9 @@ main{
 						(four,gallery4),(five,gallery5),(six,gallery6);
 						@each $name, $url in $val{
 							.#{$name}{
-								background-image: url("../img/#{$url}.jpg")
+								background-image: url("../img/#{$url}.jpg");
+								text-align: center;
+    							padding: 95px;
 							}
 						}
 				    }

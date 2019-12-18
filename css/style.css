@@ -1366,21 +1366,33 @@ html body .legend {
   }
   html body main .main__ourMission--slides .main-content .container .one {
     background-image: url("../img/gallery1.jpg");
+    text-align: center;
+    padding: 95px;
   }
   html body main .main__ourMission--slides .main-content .container .two {
     background-image: url("../img/gallery2.jpg");
+    text-align: center;
+    padding: 95px;
   }
   html body main .main__ourMission--slides .main-content .container .three {
     background-image: url("../img/gallery3.jpg");
+    text-align: center;
+    padding: 95px;
   }
   html body main .main__ourMission--slides .main-content .container .four {
     background-image: url("../img/gallery4.jpg");
+    text-align: center;
+    padding: 95px;
   }
   html body main .main__ourMission--slides .main-content .container .five {
     background-image: url("../img/gallery5.jpg");
+    text-align: center;
+    padding: 95px;
   }
   html body main .main__ourMission--slides .main-content .container .six {
     background-image: url("../img/gallery6.jpg");
+    text-align: center;
+    padding: 95px;
   }
 }
 
